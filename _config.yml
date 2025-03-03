@@ -21,6 +21,8 @@ github_username: manoedinata
 minimal_mistakes_skin: default
 search: true
 repository: manoedinata/manoedinata.github.io
+url: https://manoedinata.github.io
+baseurl: /blog
 
 # Build settings
 markdown: kramdown
