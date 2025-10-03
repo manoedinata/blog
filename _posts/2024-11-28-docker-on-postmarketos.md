@@ -8,7 +8,7 @@ After successfully [running postmarketOS on my old Samsung Galaxy J4](https://ma
 
 Since postmarketOS runs Alpine Linux natively, there's no need to run VMs, chroot, or whatever it is. Just native. Ain't that cool?
 
-# Device
+## Device
 
 I have [Samsung Galaxy J4](https://wiki.postmarketos.org/wiki/Samsung_Galaxy_J4_(samsung-j4lte)) (newly ported), with downstream kernel 3.18. To get Docker working on it, I have to apply some changes:
 
@@ -18,11 +18,11 @@ I have [Samsung Galaxy J4](https://wiki.postmarketos.org/wiki/Samsung_Galaxy_J4_
 
 Let's break 'em down!
 
-# Enabling Required Kernel Features
+## Enabling Required Kernel Features
 
 TBA.
 
-# Installing Docker
+## Installing Docker
 
 This should be straightforward.
 
@@ -31,7 +31,7 @@ sudo apk add docker docker-compose
 sudo addgroup $USER docker
 ```
 
-# Enabling cgroup Mounts
+## Enabling cgroup Mounts
 
 It seems like cgroupv2 isn't supported in my device. Dunno why, it's just not appearing on `/sys/fs/cgroup`.
 
@@ -50,7 +50,7 @@ rc_cgroup_mode="hybrid"
 
 ![384658061-e76e1790-7f6a-4382-8fcb-ce1abdf49e83.png](/media/384658061-e76e1790-7f6a-4382-8fcb-ce1abdf49e83.png)
 
-# Switching to iptables-legacy
+## Switching to iptables-legacy
 
 Trying to manually run dockerd results in this error:
 
@@ -77,14 +77,14 @@ sudo ln -s /usr/sbin/arptables-legacy /usr/sbin/arptables
 sudo ln -s /usr/sbin/ebtables-legacy /usr/sbin/ebtables
 ```
 
-# Starting Docker
+## Starting Docker
 
 ```
 sudo service docker start
 sudo rc-update add docker default
 ```
 
-# Testing
+## Testing
 
 ![384660205-f565a681-05fa-45fe-9902-eec4f514061b.png](/media/384660205-f565a681-05fa-45fe-9902-eec4f514061b.png)
 

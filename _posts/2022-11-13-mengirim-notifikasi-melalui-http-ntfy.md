@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-# Penggunaan
+## Penggunaan
 
 Notifikasi dikirim ke suatu alamat yang dinamakan topik. Pengguna harus berlangganan/membuat sebuah topik menggunakan aplikasi pada ponsel, web UI, atau melalui API. Sumber.
 
@@ -39,6 +39,6 @@ Contoh notifikasi dengan judul, tags, dan bersifat urgent:
 
 ![Contoh notifikasi dengan judul, tags, dan urgent](/media/1-vc-U7-UK1-Uvzh-HKZYQS3mg.png)
 
-# Kesimpulan
+## Kesimpulan
 
 ntfy.sh sangat berguna untuk mengirim pesan notifikasi secara otomatis melalui CLI ataupun melalui integrasi aplikasi, berbasis HTTP request. ntfy.sh dapat dikombinasikan dengan pekerjaan otomatis seperti backup harian, pengecekan kapasitas penyimpanan, dan lain sebagainya.

@@ -12,7 +12,7 @@ Sebagai _Android enthusiast_, kurang pas rasanya jika memiliki ponsel Android ta
 
 <!-- more -->
 
-# Nostalgia Dulu…
+## Nostalgia Dulu…
 
 Terdapat beberapa metode root yang dulu pernah saya coba.
 
@@ -22,7 +22,7 @@ Kemudian ada Magisk yang menerapkan konsep _systemless_. Perubahan _file_ sistem
 
 Kini, muncul satu lagi metode untuk mendapatkan akses root di perangkat Android. Metode yang mengandalkan komponen driver pada kernel Linux, yaitu [KernelSU](https://kernelsu.org).
 
-# Apa Itu KernelSU?
+## Apa Itu KernelSU?
 
 KernelSU merupakan sebuah solusi mendapatkan akses root berbasis kernel. Ini artinya **akses root yang didapatkan akan berasal dari kernel**.
 
@@ -32,11 +32,11 @@ Namun, semua yang memiliki kelebihan pasti mempunyai kekurangan. KernelSU ini bu
 
 Tapi tenang saja, KernelSU memiliki beberapa lapis perlindungan yang tertanam di kode sumbernya, dan seluruh akses root dapat diatur melalui _manager_ nya.
 
-# GKI Berperan Penting
+## GKI Berperan Penting
 
 Perkembangan sistem operasi Android yang begitu cepatnya membawa sebuah konsep baru dalam proses pengembangannya. Salah satunya adalah [_Generic Kernel Image_](https://source.android.com/docs/core/architecture/kernel/generic-kernel-image), biasa disingkat dengan **GKI**.
 
-## Mengenal GKI
+### Mengenal GKI
 
 Konsep GKI mengizinkan berbagai perangkat Android menggunakan satu basis kernel yang dikelola pengembangannya oleh Google. DIkarenakan mayoritas perangkat membutuhkan berbagai penyesuaian (_patches_) agar dapat berjalan secara normal, _vendor_ mengintegrasikan penyesuaian tersebut melalui _loadable kernel modules_ (LKM).
 
@@ -44,19 +44,19 @@ Konsep GKI mengizinkan berbagai perangkat Android menggunakan satu basis kernel 
 
 Perangkat yang menggunakan GKI memiliki partisi tambahan yaitu **vendor_boot** dan **vendor_dlkm** (berada di partisi [_super_](https://source.android.com/docs/core/ota/dynamic_partitions)). Kedua partisi ini berisi LKM yang dibutuhkan oleh kernel untuk mengaplikasikan penyesuaian oleh _vendor_.
 
-## GKI & KernelSU
+### GKI & KernelSU
 
 GKI berperan penting dalam proses instalasi KernelSU. Agar lebih mudah, KernelSU menyediakan berbagai _image_ kernel siap pakai yang dapat menggantikan image bawaan. Dikarenakan konsep GKI mengizinkan penggunaan basis kernel yang sama, maka pengguna cukup mengganti _image_ kernel yang digunakan dengan _image_ yang telah ditambahkan KernelSU.
 
 Atau, jika tidak ingin mengganti _image_ kernel yang digunakan (mungkin karena masih memiliki perubahan dari vendor), KernelSU dapat dimuat melalui LKM, mirip seperti _module_ lain yang berfungsi sebagai penyesuaian tambahan sebelumnya.
 
-## Tapi… Kok Nggak Bisa?
+### Tapi… Kok Nggak Bisa?
 
 Beberapa waktu sebelumnya saya coba untuk melakukan _patching_ file boot.img milik ponsel saya, Samsung Galaxy A33 5G, seperti yang dituliskan di [dokumentasi](https://kernelsu.org/guide/installation.html). Tujuannya untuk menambahkan KernelSU melalui [metode LKM](https://kernelsu.org/guide/installation.html#lkm-installation).
 
 Namun ketika saya _flash_, ponsel tidak dapat booting dengan error DTB check fail.
 
-## Compile Kernel dengan KernelSU
+### Compile Kernel dengan KernelSU
 
 Mau tidak mau, saya harus meng-compile kernel saya sendiri untuk menambahkan KernelSU ke dalamnya. Compile berjalan cukup lancar, walaupun ada beberapa error, tapi itu wajar.
 

@@ -7,7 +7,7 @@ Now, to be honest, porting pmOS onto this device is more beneficial than the las
 
 Well, not yet.
 
-# It Boots, Finally...
+## It Boots, Finally...
 
 After some numerous, desperate attempts trying to build pmOS for this device (heck, even getting the kernel compiled is kinda hard), I managed to boot it. With the help of [@map220v](https://github.com/map220v)'s [modified A51 Linux kernel source](https://github.com/map220v/kernel_samsung_a51-linux), which he used for postmarketOS as well some years ago, I got the required patches to fix some weird issues, mostly about DECON and framebuffer.
 
@@ -17,17 +17,17 @@ I also had to fix some compilation issues, which 90% of them are just warnings t
 
 Here's the [modified kernel source used](https://github.com/manoedinata/android_kernel_samsung_a51/tree/linux/) and the [pmaports](https://gitlab.postmarketos.org/manoedinata/pmaports/-/tree/manoedinata/add-samsung-a51) (not yet submitted into official pmaports until I fixed all major issues).
 
-# Issues
+## Issues
 
 Ah yes, now comes the worst part. What could go wrong with postmarketOS on A51, though?
 
 Well, some things do.
 
-## 1. USB Networking
+### 1. USB Networking
 
 No matter what I've tried trying to bringup RNDIS interface, it's just refusing to work. Thus, I can't connect to the device through USB cable. I did make sure every required kernel configurations are enabled (ConfigFS Ether & RNDIS to sum up), using [initfs-hook](https://gitlab.postmarketos.org/postmarketOS/pmaports/-/blob/4d327313e40b48bdb9ac0c6e07f0b36cc2be4ff8/device/testing/device-samsung-dream/initfs-hook.sh) (like [samsung-dreamlte](https://wiki.postmarketos.org/wiki/Samsung_Galaxy_S8_(samsung-dreamlte)) did), and even enabling ConfigFS manually in [Debug Shell](https://wiki.postmarketos.org/wiki/Initramfs/Inspecting#Using_the_debug_shell), but no luck.
 
-## 2. Wi-Fi
+### 2. Wi-Fi
 
 Although the required proprietary blobs are loaded and Wi-Fi did turn on, it can't connect to any available network. This assumption is based on attempt to connect to an AP through NetworkManager (on XFCE 4).
 
