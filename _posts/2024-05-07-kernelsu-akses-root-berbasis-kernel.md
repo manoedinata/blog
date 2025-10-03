@@ -62,4 +62,4 @@ Mau tidak mau, saya harus meng-compile kernel saya sendiri untuk menambahkan Ker
 
 Hasilnya? _Ta-daa!_ Kernel dengan KernelSU!
 
-![0_o3XON51xkQiWcHu_.webp]({{site.baseurl}}/media/0_o3XON51xkQiWcHu_.webp)
+![0_o3XON51xkQiWcHu_.webp](/media/0_o3XON51xkQiWcHu_.webp)
