@@ -1,5 +1,9 @@
 ---
 title: 'PostmarketOS on Samsung Galaxy A51: Progress so far...'
+categories:
+  - postmarketOS
+tags:
+  - linux
 ---
 After successfully porting [postmarketOS (pmOS) on Samsung Galaxy J4](https://wiki.postmarketos.org/wiki/Samsung_Galaxy_J4_(samsung-j4lte)), I continued to my another unused device with higher specification, [Samsung Galaxy A51](https://wiki.postmarketos.org/wiki/Samsung_Galaxy_A51_(samsung-a51)).
 

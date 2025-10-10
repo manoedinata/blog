@@ -2,6 +2,8 @@
 title: Docker on postmarketOS
 categories:
   - postmarketOS
+tags:
+  - linux
 excerpt: Running Docker on a phone?? Hell yeah!
 ---
 After successfully [running postmarketOS on my old Samsung Galaxy J4]({% post_url 2024-11-16-porting-postmarketos %}), it's time to take it even further: **Running Docker to self-host local applications**.
