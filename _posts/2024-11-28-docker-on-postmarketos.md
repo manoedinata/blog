@@ -1,6 +1,6 @@
 ---
 title: Running Docker on postmarketOS
-description: Running Docker on a phone? Hell yeah!
+description: Docker on a phone? Hell yeah!
 categories:
   - postmarketOS
 tags:
