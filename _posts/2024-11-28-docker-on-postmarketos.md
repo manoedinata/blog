@@ -1,6 +1,6 @@
 ---
-title: Docker on postmarketOS
-description: Running Docker on a phone?? Hell yeah!
+title: Running Docker on postmarketOS
+description: Running Docker on a phone? Hell yeah!
 categories:
   - postmarketOS
 tags:
@@ -91,4 +91,3 @@ sudo rc-update add docker default
 ![384660205-f565a681-05fa-45fe-9902-eec4f514061b.png](/media/384660205-f565a681-05fa-45fe-9902-eec4f514061b.png)
 
 ![384660185-7f4de3c9-9581-4040-9820-b6c8a327b891.png](/media/384660185-7f4de3c9-9581-4040-9820-b6c8a327b891.png)
-
