@@ -223,3 +223,35 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# Prose
+# https://github.com/prose/prose
+prose:
+  siteurl: "https://mdinata.my.id/blog/"
+  media: "media"
+  ignore:
+    - README.md
+    - _config.yml
+  metadata:
+    "_posts":
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add Categories"
+          placeholder: "Add Categories"
+          alterable: true
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Add Tags"
+          alterable: true
+      - name: "description"
+        field:
+          element: "text"
+          label: "Add Description / Excerpt"
+          placeholder: "Add Description / Excerpt"
